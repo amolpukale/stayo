@@ -1,0 +1,60 @@
+<br><br><br>
+<span style="position: absolute;top: 18px;left:10px;font-size: 70px;color: red"><b>STAYO</b>&nbsp;<img src="/assets/l4.jpeg" style="height: 80px;"></span>
+
+<div>
+  <ul>
+
+  <li *ngIf="!isLogin"><a routerLink="login">LOGIN</a></li>
+  <li *ngIf="isLogin"> <a (click)="logout()">LOGOUT</a></li>
+
+  <li><a routerLink="register">REGISTER</a></li>
+
+  <li><a routerLink="about">ABOUT</a>
+  </li>
+    <li><a routerLink="contactUs">CONTACT US</a>
+    </li>
+   <li><a routerLink="home">HOME</a></li> 
+
+  <br><br>
+  <!-- <div style="text-align: right;position: relative;top: 0px;right: 40px;"><a routerLink="reservation">Reservation</a></div> -->
+
+</ul>
+</div>
+
+    <router-outlet>
+
+    </router-outlet>
+
+
+
+<!-- <br>
+<div class="div2" style="background-color: rgb(245, 12, 51);height: 230px;width: 100%;opacity: 0.8;;position: relative;margin: 0px;top: 900px">
+<br/>
+  <h1 style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" style="margin: 10px">Worlds Fastest Growing Hotel Chain</h1>
+<table border="0.3" style="position: absolute;left: 10%;">
+  <tr>
+    <td><input type="text" style="height: 70px;width: 400px;font-size: 30px" placeholder="Near me"></td><td><input type="date" style="height: 70px;width: 400px;font-size: 30px" placeholder="Check in date"></td>
+    <td><select style="height: 70px;width: 400px;font-size: 30px;background-color: white"><option>1 Room</option>
+      <option>2 Room</option>
+      <option>3 Room</option></select>
+      </td>
+      <td><input type="submit" value="Search" style="height: 70px;width: 200px;background-color:rgb(40, 219, 40)"></td>
+  </tr>
+</table>
+</div> -->
+<!-- <div style="height: 2500px;width: 100%;background-color: white;position: relative;top: 910px">
+
+  <div id="slider" style="position: absolute;border-radius: 100px;top: 40px;width: 100%;height: 1000px;">
+  <figure>
+  <img src="/assets/21.jpg" alt>
+  <img src="/assets/22.jpg" alt>
+  <img src="/assets/23.jpg" alt>
+  <img src="/assets/24.jpg" alt>
+  <img src="assets/25.jpg" alt>
+  </figure>
+  </div>
+  <div style="background-color: black;position: relative; top: 1750px;height: 700px;opacity: 0.5;">
+
+  </div>
+</div> -->
+

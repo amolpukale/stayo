@@ -1,0 +1,44 @@
+
+<script>
+    function myfunction()
+    {   
+      var input1=document.getElementById("txt");
+      var span1=document.getElementById("spn");
+      if(input1.value =="")
+      {
+        span1.innerText="Enter correct Name";
+        //alert("Enter correct Name");
+      }
+      var input2=document.getElementById("pwd");
+      var span2=document.getElementById("spn1");
+      if(input2.value =="")
+      {
+        span2.innerText="Enter correct password";
+        //alert("Enter correct password");
+      }
+    }
+  </script>
+<div class="a">
+<div class="div1">
+<div class="login-box">
+
+ <img src="/assets/index.png" class="index"><br>
+  <h1 style="font-size: 40px;">LOGIN</h1>
+  <br><br>
+  <form #myForm="ngForm" (ngSubmit)="login(myForm)" role="form">
+      <p style="font-size: 25px">Username:</p>
+        <input type="text" ngModel name="username" required="required" placeholder="Enter Username" id="txt">	
+        <span id="spn" style="color:red"></span>	
+    <br><br>
+      <p style="font-size: 25px">Password:</p>
+        <input type="password" ngModel name="password" required="required" placeholder="Enter Password" id="pwd">
+        <span id="spn1" style="color:red"></span><br><br>		<br>
+    
+          <input type="submit" name="submit" value="Login"> 
+  <br><br><br>
+        <p style="font-size: 20px"><a routerLink="/forget">Forget Password</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a routerLink="/register">  Register</a>
+  </form>
+</div>
+</div>
+</div>
