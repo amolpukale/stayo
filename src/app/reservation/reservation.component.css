@@ -1,29 +1,77 @@
-.main{
-    text-align: center;
+
+.a{
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	background: url("/assets/abc.jpg");
+	height: 100%;
+	width: 100%;
+	background-size: cover;
 }
-.div1{
-    float: left;
-    background-color: black;
-    padding-bottom: 18px ;
-    border-radius: 30px;
+.login-box{
+	width: 600px;
+	height: 720px;
+	border-radius: 25px;
+	background:black;
+	color: #fff;
+	top: 30px;
+	left: 0px;
     position: relative;
-    left: 70px;
-     opacity: .9;
-     height: 800px;
-     width: 600px;
+    left: 30%;
+	/* transform: translate(140%,30%); */
+	box-sizing: border-box;
+	padding: 40px 30px;
 }
-.main input[type="submit"]
+
+h1{
+	margin: 0;
+	padding: 0 0 20px;
+	text-align: center;
+	font-size: 22px;
+}
+.login-box p{
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+.login-box input{
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.login-box input[type="text"], input[type="password"],input[type="email"],input[type="phone"],input[type="date"],input[type="number"]
+{
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 70px;
+	color: #fff;
+	font-size: 22px;
+}
+
+.login-box input[type="submit"]
 {
 	border: none;
 	outline: none;
-    height: 50px;
-    width: 170px;
+	height: 50px;
 	background: #1c8adb;
 	color: #fff;
-	font-size: 24px;
+	font-size: 28px;
 	border-radius: 20px;
 }
-.main input[type="text"],[type="number"],[type="date"],[type="email"]
+.login-box input[type="submit"]:hover
 {
-	height: 20px;
+	cursor: pointer;
+	background: #39dc79;
+	color: #000;
 }
+.login-box a:hover
+{
+color: #39dc79;
+}
+
+
+
+
+

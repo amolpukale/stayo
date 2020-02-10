@@ -40,6 +40,14 @@
      width: 600px;
 }
 
+.dropdown{
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    height: 30px;
+    width:100px ;
+}
+
 ul{
     margin: 0px;
     padding: 0px;
@@ -73,3 +81,5 @@ ul li:hover ul li{
 div{
     font-size: 22px;
 }
+
+

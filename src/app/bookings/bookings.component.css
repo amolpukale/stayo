@@ -1,0 +1,10 @@
+input[type="button"]
+{
+	border: none;
+	outline: none;
+	height: 50px;
+	background:red;
+	color: #fff;
+	font-size: 28px;
+	border-radius: 20px;
+}

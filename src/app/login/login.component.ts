@@ -22,13 +22,30 @@ login(loginForm)
 {
   
   this.data=loginForm.form.value;
-  console.log(this.data);
+  //console.log(this.data);
   this.service.login(this.data).subscribe((res)=>
 {
+  //sessionStorage['user']=res
+  var user={'username':res['username'],'userId':res['userId']}
+  sessionStorage['user']=JSON.stringify(user);
+  sessionStorage['userId']=res['userId']
   sessionStorage['username']=res['username'];
   sessionStorage['email']=res['email'];
+  sessionStorage['phone']=res['phone']
+  sessionStorage['role']=res['role']
   this.emService.logInBtnSwitch(true);
-  this.router.navigate(['home']);
+  this.service.changeStatusToAvailable().subscribe();
+  if(res['role']=='ADMIN')
+  {
+    this.router.navigate(['adminHome']);
+  }else if(res['role']=='USER')
+  {
+    this.router.navigate(['home']);
+  }else if(res['role']=='CUSTOMER')
+  {
+    this.router.navigate(['customerHome']);
+  }
+
 }
 )
 

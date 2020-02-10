@@ -15,9 +15,9 @@ body{
     position: relative;
     left: 70px;
      opacity: .9;
-     height: 800px;
+     height: 850px;
 	 width: 600px;
-	 top: 20px;
+	 top: 10px;
 }
 .a{
 	position: absolute;
@@ -68,7 +68,7 @@ h1{
 	color: #fff;
 	font-size: 22px;
 }
-.login-box input[type="button"]
+.login-box input[type="button"], input[type="submit"]
 {
 	border: none;
 	outline: none;
@@ -78,7 +78,7 @@ h1{
 	font-size: 28px;
 	border-radius: 20px;
 }
-.login-box input[type="button"]:hover
+.login-box input[type="button"]:hover,input[type="submit"]:hover
 {
 	cursor: pointer;
 	background: #39dc79;

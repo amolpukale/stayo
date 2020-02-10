@@ -16,7 +16,7 @@ body{
     position: relative;
     left: 70px;
      opacity: .9;
-     height: 800px;
+     height: 870px;
 	 width: 600px;
 	 top: 20px;
 }
@@ -25,7 +25,7 @@ body{
 	margin: 0;
 	padding: 0;
 	background: url("/assets/abc.jpg");
-	height: 92%;
+	height: 100%;
 	width: 100%;
 	background-size: cover;
 }
@@ -40,7 +40,7 @@ body{
 	position: relative;
 	/* transform: translate(140%,30%); */
 	box-sizing: border-box;
-	padding: 70px 30px;
+	padding: 40px 30px;
 }
 
 h1{
@@ -68,6 +68,20 @@ h1{
 	height: 70px;
 	color: #fff;
 	font-size: 22px;
+}
+.roleclass
+{
+	/* border: none;
+	outline: none; */
+	height: 50px;
+	background:white;
+	color:black;
+	font-size: 28px;
+	border-radius: 10px;
+	width: 300px;
+	position: relative;
+	left: 200px;
+	top:-15px;
 }
 .login-box input[type="submit"]
 {

@@ -1,0 +1,50 @@
+<div class="a">
+    <div class="login-box">
+    
+      <h1 style="font-size: 40px;">ROOM REGISTER</h1>
+      
+      <form #myForm="ngForm" (ngSubmit)="add(myForm)" role="form">
+         
+          <p style="font-size: 25px">Hotel Id:</p>
+          <input type="number" ngModel name="hotelId" placeholder="Enter Hotel Id">	
+          <span id="spn" style="color:red"></span>	
+
+        <p style="font-size: 25px">Room No:</p>
+            <input type="number" ngModel name="roomNo" placeholder="Enter Room No">	
+            <span id="spn" style="color:red"></span>	
+           
+            <p style="font-size: 25px">Room Type:</p>
+            
+      
+            <select class="select" ngModel name="roomtype">
+              <option>SINGLE</option>
+              <option>DOUBLE</option>
+              <option>TRIPLE</option>
+              <option>KING</option>
+              <option>QUEEN</option>
+            </select>
+
+            <p style="font-size: 25px">Status:</p>
+        <select class="select" ngModel name="status">
+          <option>AVAILABLE</option>
+          <option>BOOKED</option>
+        </select>
+
+            <p style="font-size: 25px">Price:</p>
+            <input type="number" ngModel name="price" placeholder="Enter Price">	
+            <span id="spn" style="color:red"></span>
+          
+            <p style="font-size: 25px">Max Occupancy:</p>
+            <input type="number" ngModel name="maxOccupancy" placeholder="Enter Max Occupancy">	
+            <span id="spn" style="color:red"></span>
+            
+            <p style="font-size: 25px">Description:</p>
+            <input type="text" ngModel name="description" placeholder="Enter Description">	
+            <span id="spn" style="color:red"></span>
+    
+     
+              <input type="submit" name="submit" value="Submit"> 
+      </form>
+    </div>
+    </div>
+    

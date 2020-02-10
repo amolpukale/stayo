@@ -1,33 +1,40 @@
-<br>
-<div class="div2" style="background: url('/assets/s.jpg');opacity: 0.9;background-color: rgb(245, 12, 51);height: 230px;width: 100%;opacity: 0.8;;position: relative;margin: 0px;top: 0px">
+
+<div class="div2" style="background: url('/assets/s.jpg');opacity: 0.9;background-color: rgb(245, 12, 51);height: 230px;width: 100%;opacity: 0.8;;position: relative;margin: 0px;top: 0px;border-radius: 0px">
 <br/><br>
   <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
    style="margin: 10px;color: white;font-size: 40px;text-align: center">
-  World's Fastest Growing Hotel Chain</h1>
-<br>
-<table border="0.3" style="position: absolute;left: 10%;">
+<b>  World's Fastest Growing Hotel Chain</b></h1>
+<br> 
+<form #myForm="ngForm" (ngSubmit)="search(myForm)" role="form">
+<table class="div3" border="0.3" style="position: absolute;left: 10%;">
+ 
   <tr>
-    <td><input type="text" style="height: 60px;width: 400px;font-size: 22px" placeholder="Search by city,hotel or neighborhood"></td>
-    <td><input type="date" style="height: 60px;width: 400px;font-size: 30px"></td>
-    <td><select style="height: 65px;width: 400px;font-size: 30px;background-color: white"><option>1 Room</option>
+    <td><input type="text" ngModel name="city" placeholder="Search by city,hotel or neighborhood"></td>
+    <td><input type="date" ngModel name="date" ></td>
+    <td><select ngModel name="select" style="height: 61px;width: 400px;font-size: 30px;background-color: white"><option>1 Room</option>
       <option>2 Room</option>
       <option>3 Room</option></select>
       </td>
-      <td><input type="submit" value="Search" style="height: 65px;width: 200px;background-color:rgb(40, 219, 40)"></td>
+      <td><input type="submit" value="Search" style="height: 62px;width: 200px;background-color:rgb(40, 219, 40)"></td>
   </tr>
 </table>
+</form>
 </div>
-<div style="width: 100%;background-color: white;position: relative;top: -20px">
+<div *ngIf="show" style="width: 100%;background-color: white;position: relative;top: -20px">
 
   <div id="slider" style="position: absolute;border-radius: 100px;top: 40px;width: 100%;height: 1000px;">
   <figure>
+      <img src="/assets/1.jpg" alt>
+      <img src="/assets/23.jpg" alt>
   <img src="/assets/21.jpg" alt>
   <img src="/assets/22.jpg" alt>
-  <img src="/assets/23.jpg" alt>
   <img src="/assets/24.jpg" alt>
   <img src="assets/25.jpg" alt>
+  <img src="/assets/2.jpg" alt>
+  <img src="/assets/3.jpg" alt>
   </figure>
   </div>
+
 
   <div class="div12">
      
@@ -44,6 +51,7 @@
         
         </p></h3>
       </div>
+
 <br><br>
   <div style="background-color: slategrey;position: relative; top: 1100px;height: 600px;opacity: 1;color: white;font-size: 20px">
 <p style="font-size: 50px;margin: 30px;padding: 30px;">
@@ -52,8 +60,8 @@
 <a>Teams/Career</a><br><br>
 <a>Blogs</a><br><br>
  <a>Support</a><br>
-  </div><br><br>  <hr>
-  ,<div style="position: relative;left: 30px;font-size: 25px;color: white">
+  </div><br> <hr>
+  <div style="position: relative;left: 30px;font-size: 25px;color: white">
     <a href="">Facebook</a>&nbsp;&nbsp;
     <a href="">Instagram</a>&nbsp;&nbsp;
      <a href="">Twitter</a><br>
@@ -61,6 +69,71 @@
 
 </div>
 </div>
+
+<div *ngIf="show1" class="table-responsive">
+  
+    <br><br><br>
+  <table class="table table-hover" border="1" style="width: 100%;height: 100%;text-align: center">
+    <thead>
+      <tr style="height: 100px;font-size: 30px">
+        <th>hotelId</th>
+         <th>hotelName</th><th>Address</th><th>city</th>
+          <th>state</th><th>landline</th><th>mail</th><th>pincode</th>
+          <th>website</th><th>features</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let d of data" style="height: 100px;">
+          <td>{{d.hotelId}}</td>
+            <td>{{d.hotelName}}</td>
+            <td>{{d.address}}</td>
+            <td>{{d.city}}</td>
+            <td>{{d.state}}</td>
+            <td>{{d.landline}}</td>
+            <td>{{d.mail}}</td>
+            <td>{{d.pincode}}</td>
+            <td>{{d.website}}</td>
+            <td>{{d.features}}</td>
+           
+            <td><input type="button" *ngIf="email" (click)="book(d)" value="Book"> 
+            <a *ngIf="!email" routerLink="/login" >Book</a> </td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+
+<div *ngIf="show2" class="table-responsive">
+  
+  <br><br><br>
+<table class="table table-hover" border="1" style="width: 100%;height: 100%;text-align: center">
+  <thead>
+    <tr style="height: 100px;font-size: 30px">
+       <th>Room No</th><th>Room Type</th>
+        <th>status</th><th>description</th><th>maxOccupancy</th><th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let d of data" style="height: 100px;">
+      
+          <td>{{d.roomNo}}</td>
+          <td>{{d.roomtype}}</td>
+          <td>{{d.status}}</td>
+          <td>{{d.description}}</td>
+          <td>{{d.maxOccupancy}}</td>
+          <td>{{d.price}}</td>
+     
+          <td><input type="button" *ngIf="email" (click)="bookroom(d)" value="Book"> 
+   
+      </tr>
+  </tbody>
+</table>
+
+</div>
+<div *ngIf="show3" style="height: 800px;width: 1500px;;position: relative;top: 10px" >
+  <img src="/assets/3d.gif" style="position: relative;height: 600px;">
+  <h1 style="position: absolute;left: 800px;top:200px"><b>Not Found Any Hotel To This City</b></h1>
+</div>
+
 
 <!-- <div class="div1">
 <h1 style="position: absolute;top: 20px;left:200px;font-size: 70px;color: red">OYO</h1>

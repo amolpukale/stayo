@@ -1,0 +1,54 @@
+<div class="a">
+  <div class="login-box">
+  
+    <h1 style="font-size: 40px;">ROOM REGISTER</h1>
+    
+    <form #myForm="ngForm" (ngSubmit)="update(myForm)" role="form">
+       
+        <p style="font-size: 25px">Hotel Id:</p>
+        <input type="number" [(ngModel)]="hotelId.hotelId" name="hotelId">	
+        <span id="spn" style="color:red"></span>	
+
+        <p style="font-size: 25px">Room Id:</p>
+        <input type="number" [(ngModel)]="data.id" name="id">	
+        <span id="spn" style="color:red"></span>
+
+      <p style="font-size: 25px">Room No:</p>
+          <input type="number" [(ngModel)]="data.roomNo" name="roomNo">	
+          <span id="spn" style="color:red"></span>	
+         
+          <p style="font-size: 25px">Room Type:</p>
+          
+    
+          <select class="select" [(ngModel)]="data.roomtype" name="roomtype">
+            <option>SINGLE</option>
+            <option>DOUBLE</option>
+            <option>TRIPLE</option>
+            <option>KING</option>
+            <option>QUEEN</option>
+          </select>
+
+          <p style="font-size: 25px">Status:</p>
+      <select class="select" [(ngModel)]="data.status" name="status">
+        <option>AVAILABLE</option>
+        <option>BOOKED</option>
+      </select>
+
+          <p style="font-size: 25px">Price:</p>
+          <input type="number" [(ngModel)]="data.price" name="price">	
+          <span id="spn" style="color:red"></span>
+        
+          <p style="font-size: 25px">Max Occupancy:</p>
+          <input type="number" [(ngModel)]="data.maxOccupancy" name="maxOccupancy">	
+          <span id="spn" style="color:red"></span>
+          
+          <p style="font-size: 25px">Description:</p>
+          <input type="text" [(ngModel)]="data.description" name="description">	
+          <span id="spn" style="color:red"></span>
+  
+   
+            <input type="submit" name="submit" value="Submit"> 
+    </form>
+  </div>
+  </div>
+  

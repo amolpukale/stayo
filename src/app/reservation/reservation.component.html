@@ -1,36 +1,35 @@
+<div class="a">
 <div class="div1">
-<div class="main" style="font-size: 23px"><br>
-  <div style="padding-bottom: 15px;font-size : 40px; color:aqua;margin: 20px">Hotel Reservation</div>
-  <div style="display: flex; padding-bottom: 18px;width : 450px;">
- <div style=" margin-left : 120px; margin-right : 1%; width : 49%;">First name<span style="color: red;"> *</span><br/>
- <input type="text" id="data_2" name="data_2" style="width: 100%;">
- </div>
- <div style=" margin-left : 1%; margin-right : 0; width : 49%;">Last name<span style="color: red;"> *</span><br/>
- <input type="text" id="data_3" name="data_3" style="width: 100%;" >
- </div>
-  </div><div style="padding-bottom: 18px;">Phone<span style="color: red;"> *</span><br/>
- <input type="text" id="data_4" name="data_4" style="width : 450px;" >
- </div>
-  <div style="padding-bottom: 18px;">Email<span style="color: red;"> *</span><br/>
- <input type="email" id="data_5" name="data_5" style="width : 450px;" >
- </div>
-  <div style="padding-bottom: 18px;">Arrival date<span style="color: red;"> *</span><br/>
- <input type="date" id="data_6" name="data_6" style="width: 250px">
- </div>
 
- <div style="padding-bottom: 18px;">Departure date<span style="color: red;"> *</span><br/>
- <input type="date" id="data_7" name="data_7" style="width : 250px;">
- </div>
- <div style="padding-bottom: 18px;">Number of adults<span style="color: red;"> *</span><br/>
- <input type="number" id="data_8" name="data_8" min="0" style="width : 250px;">
- </div>
- <div style="padding-bottom: 18px;">Number of children<br/>
- <input type="number" id="data_9" name="data_9" min="0" style="width : 250px;">
- </div>
- <div style="padding-bottom: 18px;">Questions / Comments<br/>
- <textarea id="data_10" false name="data_10" style="width : 450px;" rows="6"></textarea>
- </div>
- <div style="padding-bottom: 18px;"><input  type="submit" name="skip_Submit" value="Submit"/></div>
+<div class="login-box">
+  <p style="color:red;font-size: 20px;position: absolute"> {{msg}}</p>
+  <h1 style="font-size: 40px;">RESERVATION</h1>
+  
+  <form #myForm="ngForm" (ngSubmit)="book(myForm)" role="form">
+   
+      <p style="font-size: 25px">Check In date:</p>
+      <input type="date" ngModel name="dateFrom" placeholder="Enter Check in date" id="email">
+      <span id="spn1" style="color:red"></span>
+
+      <p style="font-size: 25px">Check Out date:</p>
+      <input type="date" ngModel name="dateTo" placeholder="Enter Check Out date" id="email">
+      <span id="spn1" style="color:red"></span>
+ 
+      <p style="font-size: 25px">Number of adults:</p>
+      <input type="number" ngModel name="noOfAdults" placeholder="Enter Number of adults" id="email">
+      <span id="spn1" style="color:red"></span>
+
+
+      <p style="font-size: 25px">Number of childrens:</p>
+      <input type="number" ngModel name="noOfChild" placeholder="Enter Number of childrens" id="email">
+      <span id="spn1" style="color:red"></span>
+
+      <input type="number" ngModel name="user" hidden>
+      <input type="number" ngModel name="room" hidden>
+         <br><br> <input type="submit" class="btn btn-primary" name="submit" value="Book"> 
+  <br>
+  </form>
+</div>
 
 </div>
 </div>

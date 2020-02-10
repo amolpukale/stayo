@@ -1,0 +1,54 @@
+<div class="a">
+  <div class="login-box">
+  
+    <h1 style="font-size: 40px;">HOTEL UPDATE</h1>
+    
+    <form #myForm="ngForm" (ngSubmit)="update(myForm)" role="form">
+        <p style="font-size: 25px">Hotel Name:</p>
+          <input type="text" [(ngModel)]="data.hotelName" name="hotelName" id="txt1">	
+          <span id="spn" style="color:red"></span>	
+         
+          <p style="font-size: 25px">Address:</p>
+          <input type="text" [(ngModel)]="data.address" name="address" id="txt2">	
+          <span id="spn" style="color:red"></span>
+        
+          <p style="font-size: 25px">City:</p>
+          <input type="text" [(ngModel)]="data.city" name="city">	
+          <span id="spn" style="color:red"></span>
+        
+          <p style="font-size: 25px">State:</p>
+          <input type="text" [(ngModel)]="data.state" name="state">	
+          <span id="spn" style="color:red"></span>
+          
+          <p style="font-size: 25px">Pin Code:</p>
+          <input type="number" [(ngModel)]="data.pincode" name="pincode">	
+          <span id="spn" style="color:red"></span>
+  
+          <p style="font-size: 25px">Landline Number:</p>
+          <input type="phone" [(ngModel)]="data.landline" name="landline">	
+          <span id="spn" style="color:red"></span>
+          
+        <p style="font-size: 25px">Hotel Mail-Id:</p>
+        <input type="email" [(ngModel)]="data.mail" name="mail">
+        <span id="spn1" style="color:red"></span>
+  
+        <p style="font-size: 25px">Website:</p>
+        <input type="text" [(ngModel)]="data.website" name="website">	
+        <span id="spn" style="color:red"></span>
+    
+        <p style="font-size: 25px">Features:</p>
+        <input type="text" [(ngModel)]="data.features" name="features">	
+        <span id="spn" style="color:red"></span>
+  
+        <label for=""><b>Profile Picture</b></label>
+      <input (change)="onSelectFile($event)"  style="border: none" type="file" name="image" class="form-control">
+  
+  <!--  
+        Choose File to Upload : <input type="file" ngModel name="image" /> 
+       -->
+    
+            <input type="submit" name="submit" value="Submit"> 
+    </form>
+  </div>
+  </div>
+  

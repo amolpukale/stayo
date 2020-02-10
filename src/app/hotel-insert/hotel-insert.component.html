@@ -1,45 +1,53 @@
-
+<div class="a">
 <div class="login-box">
 
   <h1 style="font-size: 40px;">HOTEL REGISTER</h1>
   
-  <form>
+  <form #myForm="ngForm" (ngSubmit)="add(myForm)" role="form">
       <p style="font-size: 25px">Hotel Name:</p>
-        <input type="text"  name="hotelname" placeholder="Enter Hotel Name" id="txt1">	
+        <input type="text" ngModel name="hotelName" placeholder="Enter Hotel Name" id="txt1">	
         <span id="spn" style="color:red"></span>	
        
         <p style="font-size: 25px">Address:</p>
-        <input type="text"  name="address" placeholder="Enter Hotel Address" id="txt2">	
+        <input type="text" ngModel name="address" placeholder="Enter Hotel Address" id="txt2">	
         <span id="spn" style="color:red"></span>
       
         <p style="font-size: 25px">City:</p>
-        <input type="text"  name="city" placeholder="Enter City" id="txt3">	
+        <input type="text" ngModel name="city" placeholder="Enter City" id="txt3">	
         <span id="spn" style="color:red"></span>
       
         <p style="font-size: 25px">State:</p>
-        <input type="text"  name="state" placeholder="Enter City" id="txt4">	
+        <input type="text" ngModel name="state" placeholder="Enter City" id="txt4">	
         <span id="spn" style="color:red"></span>
         
         <p style="font-size: 25px">Pin Code:</p>
-        <input type="number"  name="pincode" placeholder="Enter Pin Code" id="txt5">	
+        <input type="number" ngModel name="pincode" placeholder="Enter Pin Code" id="txt5">	
         <span id="spn" style="color:red"></span>
 
         <p style="font-size: 25px">Landline Number:</p>
-        <input type="phone"  name="landline" placeholder="Enter Landline Number" id="txt6">	
+        <input type="phone" ngModel name="landline" placeholder="Enter Landline Number" id="txt6">	
         <span id="spn" style="color:red"></span>
         
       <p style="font-size: 25px">Hotel Mail-Id:</p>
-      <input type="email"  name="email" placeholder="Enter Email" id="email">
+      <input type="email" ngModel name="mail" placeholder="Enter Email" id="email">
       <span id="spn1" style="color:red"></span>
 
       <p style="font-size: 25px">Website:</p>
-      <input type="text"  name="website" placeholder="Enter Website" id="txt7">	
+      <input type="text" ngModel name="website" placeholder="Enter Website" id="txt7">	
       <span id="spn" style="color:red"></span>
   
       <p style="font-size: 25px">Features:</p>
-      <input type="text"  name="features" placeholder="Enter Features" id="txt8">	
+      <input type="text" ngModel name="features" placeholder="Enter Features" id="txt8">	
       <span id="spn" style="color:red"></span>
 
-          <input type="button" name="submit" value="Submit" onclick="myfunction()"> 
+      <label for=""><b>Profile Picture</b></label>
+    <input (change)="onSelectFile($event)"  style="border: none" type="file" name="image" class="form-control">
+
+<!--  
+      Choose File to Upload : <input type="file" ngModel name="image" /> 
+     -->
+  
+          <input type="submit" name="submit" value="Submit"> 
   </form>
+</div>
 </div>

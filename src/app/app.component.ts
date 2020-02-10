@@ -23,7 +23,8 @@ export class AppComponent {
   logout(){
     //alert("In logout");
     this.isLogin=false;
-    delete sessionStorage['username'];
+   
+    sessionStorage.clear()
     this.router.navigate(['login']);
   }
 }

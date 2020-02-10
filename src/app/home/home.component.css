@@ -10,6 +10,19 @@
      width: 600px;
 }
 
+/* .div2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 50px;
+} */
+
+.div3 input[type="text"], input[type="date"]{
+   
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 50px; */
+    height: 60px;width: 400px;font-size: 22px;
+}
 @keyframes slidy {
     0% { left: 0%; }
     20% { left: 0%; }

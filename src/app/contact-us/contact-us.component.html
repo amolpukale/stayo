@@ -3,13 +3,13 @@
 
   <h1 style="font-size: 35px;">CONTACT US FORM</h1>
   
-  <form>
+  <form #myForm="ngForm" (ngSubmit)="contact(myForm)" role="form">
       <p style="font-size: 25px">Name:</p>
-        <input type="text"  name="name" placeholder="Enter name" id="txt1">	
+        <input type="text" ngModel name="name" placeholder="Enter name" id="txt1">	
         <span id="spn" style="color:red"></span>	
     
         <p style="font-size: 25px">Email:</p>
-        <input type="email"  name="email" placeholder="Enter Email" id="email">
+        <input type="email" ngModel name="email" placeholder="Enter Email" id="email">
         <span id="spn1" style="color:red"></span>
 
       <p style="font-size: 25px">Phone:</p>
@@ -21,17 +21,17 @@
         <option>+257</option>
         <option>+258</option>
         </select> -->
-      	 <input type="phone" name="mob_digits" placeholder="77********" maxlength="10">
+      	 <input type="phone" ngModel name="mob_digits" placeholder="77********" maxlength="10">
         
       <p style="font-size: 25px">Subject:</p>
-      <input type="text"  name="subject" placeholder="Enter Subject" id="txt2">	
+      <input type="text" ngModel name="subject" placeholder="Enter Subject" id="txt2">	
       <span id="spn" style="color:red"></span>	
 
       <p style="font-size: 25px;">Message:</p><br>
-      <textarea cols="35" rows="3" style="background-color: black;font-size: 25px" placeholder="Enter Message"></textarea>	
+      <textarea cols="35" name="message" rows="3" style="background-color: black;font-size: 25px" placeholder="Enter Message"></textarea>	
       <span id="spn" style="color:red"></span>	
-<br><br>&nbsp;&nbsp;&nbsp;
-      <input type="button" name="submit" value="Submit" style="width: 150px" > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+      <input type="submit" name="submit" value="Submit" style="width: 150px" > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <input type="button" name="reset" value="Reset Form" style="width: 180px"> 
   <br><br>
 

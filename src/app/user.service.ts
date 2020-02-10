@@ -32,9 +32,37 @@ export class UserService {
     return this.http.post("http://localhost:8080/DacAug19/user/login",user);
   }
 
+
   resetPassword(data)
   {
     return this.http.post("http://localhost:8080/DacAug19/user/resetpassword",data);
+  }
+
+  contactUs(contactData)
+  {
+    return this.http.post("http://localhost:8080/DacAug19/user/contactUs",contactData);
+
+  }
+
+  getBookings(id)
+  {
+    return this.http.post("http://localhost:8080/DacAug19/user/getBooking",id);
+
+  }
+
+  changeStatusToAvailable()
+  {
+    return this.http.get("http://localhost:8080/DacAug19/user");
+
+  }
+  cancelBooking(data)
+  {
+    return this.http.post("http://localhost:8080/DacAug19/user/cancelbooking",data);
+  }
+
+  makePayment(data,roomid)
+  {
+    return this.http.post("http://localhost:8080/DacAug19/user/pay/"+roomid,data);
   }
 
 }

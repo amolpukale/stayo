@@ -1,10 +1,14 @@
+<head>
+  <meta name="viewport" content="width=device-width,initial scale=1"/>
+  <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css"/>
+  </head>
 <div class="a">
 <div class="div1">
 <div class="login-box">
 
   <h1 style="font-size: 40px;">REGISTER</h1>
   
-  <form #myForm="ngForm" (ngSubmit)="register(myForm)" role="form">
+  <form #myForm="ngForm" (ngSubmit)="register(myForm)" role="form" >
       <p style="font-size: 25px">Username:</p>
         <input type="text" ngModel name="username" placeholder="Enter Username" id="txt">	
         <span id="spn" style="color:red"></span>	
@@ -17,6 +21,12 @@
       <input type="email" ngModel name="email" placeholder="Enter Email" id="email">
       <span id="spn1" style="color:red"></span>
 
+      <!-- <p style="font-size: 25px;position: relative;top: 20px">Role:</p>
+      <select class="roleclass" ngModel name="role">
+      <option value="USER" selected>USER</option>
+      <option value="ADMIN">ADMIN</option>
+      <option value="CUSTOMER">CUSTOMER</option>
+      </select> -->
 
       <p style="font-size: 25px">Phone:</p>
       <!-- <select>
@@ -30,8 +40,8 @@
       	
        <input type="phone" ngModel name="phone" placeholder="77********" maxlength="10">
          <br><br> <input type="submit" class="btn btn-primary" name="submit" value="Submit"> 
-  <br><br>
-  <span style="font-size: 25px">Already an user?</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 25px">Already an user?</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
